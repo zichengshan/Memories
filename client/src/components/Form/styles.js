@@ -20,5 +20,5 @@ export default makeStyles((theme) => ({
     },
     buttonSubmit: {
         marginBottom: 10,
-    },
+    }
 }));
