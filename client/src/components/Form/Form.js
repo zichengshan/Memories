@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import useStyles from './styles'
 import {TextField, Button, Typography, Paper} from "@material-ui/core"
 import FileBase from "react-file-base64"
+import {useDispatch} from "react-redux"
+import {createPost} from "../../actions/posts";
 
 function Form() {
     const classes = useStyles()
@@ -12,9 +14,12 @@ function Form() {
         tags: '',
         selectedFile: ''
     })
+    const dispatch = useDispatch()
 
-    function handleSubmit() {
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        dispatch(createPost(postData))
     }
 
     function clear() {
