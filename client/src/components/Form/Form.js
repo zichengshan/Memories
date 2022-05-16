@@ -18,7 +18,7 @@ function Form({currentId, setCurrentId}) {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if(post)
+        if (post)
             setPostData(post)
     }, [post])
 
@@ -26,21 +26,25 @@ function Form({currentId, setCurrentId}) {
     function handleSubmit(e) {
         e.preventDefault()
 
-        if (currentId===0) {
+        if (currentId === 0) {
             dispatch(createPost(postData))
         } else {
             dispatch(updatePost(currentId, postData))
         }
+        clear()
     }
 
     function clear() {
-
+        setCurrentId(null)
+        setPostData({
+            creator: '', title: '', message: '', tags: '', selectedFile: ''
+        })
     }
 
     return (
         <Paper className={classes.paper}>
             <form autoCapitalize="off" className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-                <Typography variant="h6">Creating a Memory</Typography>
+                <Typography variant="h6">{currentId ? 'Editing' : 'Creating'} a Memory</Typography>
                 <TextField
                     name="creator"
                     variant="outlined"
