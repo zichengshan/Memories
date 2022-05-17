@@ -11,7 +11,7 @@ function Form({currentId, setCurrentId}) {
         creator: '',
         title: '',
         message: '',
-        tags: [],
+        tags: '',
         selectedFile: ''
     })
     const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null)
@@ -26,7 +26,7 @@ function Form({currentId, setCurrentId}) {
     function handleSubmit(e) {
         e.preventDefault()
 
-        if (currentId===0) {
+        if (currentId === 0) {
             dispatch(createPost(postData))
         } else {
             dispatch(updatePost(currentId, postData))
@@ -35,7 +35,7 @@ function Form({currentId, setCurrentId}) {
     }
 
     function clear() {
-        setCurrentId(null)
+        setCurrentId(0)
         setPostData({
             creator: '', title: '', message: '', tags: '', selectedFile: ''
         })
@@ -81,7 +81,7 @@ function Form({currentId, setCurrentId}) {
                     <FileBase
                         type="file"
                         multiple={false}
-                        onDone={(base64) => setPostData({...postData, selectedFile: base64})}
+                        onDone={({base64}) => setPostData({...postData, selectedFile: base64})}
                     />
                 </div>
                 <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit"
