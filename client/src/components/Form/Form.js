@@ -54,6 +54,7 @@ function Form({currentId, setCurrentId}) {
         history('/')
     }
 
+
     return (
         <Paper className={classes.paper}>
             <form autoCapitalize="off" className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
