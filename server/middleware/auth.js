@@ -12,10 +12,11 @@ const auth = async (req, res, next) => {
 
             req.userId = decodedData?.id
         } else {
-            // For Google
+            // For Google login
             decodedData = jwt.decode(token)
             req.userId = decodedData?.sub
         }
+
         next()
     } catch (error) {
         console.log(error)

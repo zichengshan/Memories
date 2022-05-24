@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({baseURL:'http://localhost:4000'})
+const API = axios.create({baseURL:'https://memories20220516.herokuapp.com'})
 
 // send the token back to the backend
 API.interceptors.request.use((req) => {
@@ -10,8 +10,6 @@ API.interceptors.request.use((req) => {
 
     return req
 })
-
-// const url = 'https://memories20220516.herokuapp.com/posts'
 
 export const fetchPosts = () => API.get('/posts')
 
