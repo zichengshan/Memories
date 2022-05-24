@@ -6,11 +6,13 @@ Memories is a social media app that allows users to post interesting events that
 ## 💡 Project Background
 The Project's Frontend is built with the help of React.js and Material-Ui and it is backed by Nodejs. Its Backend is built using Expressjs using MongoDB as a Database. This application has the following functions:
 
-1. Create a Memory
-2. Update a Memory
-3. Delete a Memory
-4. Like a Particular Memory
-5. Fetch all Memory at a Time
+1. Register an account
+2. Login and logout
+3. Create a Memory
+4. Update a Memory published by the user himself
+5. Delete a Memory published by the user himself
+6. Like a Particular Memory
+7. Fetch all Memory at a Time
 
 ## 💻 Technology Used
 React, Node, Express, MongoDB
@@ -18,18 +20,24 @@ React, Node, Express, MongoDB
 <img src="https://user-images.githubusercontent.com/61951792/168884206-a6a6f93e-8e47-4c4f-a39f-856a6bdf2beb.jpeg" width="600">
 
 ## 🎵 Features
+### Register
+![registerGIF](https://user-images.githubusercontent.com/61951792/169966131-fdab95e7-993f-4fe5-9828-5ac558101613.gif)
+
+### Login / Logout
+![SignInGIF](https://user-images.githubusercontent.com/61951792/169966143-be815849-6f62-4677-a505-ef7827d24487.gif)
+
 ### Create a Memory
-![createGif](https://user-images.githubusercontent.com/61951792/168888963-28cfadae-4592-4bf8-9c00-6749c445cdda.gif)
+![createGIF](https://user-images.githubusercontent.com/61951792/169965569-7cb67be0-500e-4671-9521-05a8f7b7be8b.gif)
 
 ### Update a Memory
-![updateGif](https://user-images.githubusercontent.com/61951792/168889716-0a93f1ea-8ba9-42a3-9615-bfcf1c341544.gif)
+![updateGIF](https://user-images.githubusercontent.com/61951792/169965583-568f6393-c8a9-48f1-b318-f78d6a536d38.gif)
 
 ### Delete a Memory
-![deleteGif](https://user-images.githubusercontent.com/61951792/168889381-ae3b9fee-d838-4c0e-b523-719b37e51bdb.gif)
+![deleteGIF](https://user-images.githubusercontent.com/61951792/169964052-0e617564-9ee7-41af-87a6-a2fccb68b9f2.gif)
 
+### Like/Dislike a Particular Memory
+![likeGIF](https://user-images.githubusercontent.com/61951792/169965606-f863494f-820e-4859-bd08-e8ced0e3dbe4.gif)
 
-### Like a Particular Memory
-![likeGif](https://user-images.githubusercontent.com/61951792/168889392-503b9ac9-eb59-4787-ac01-db8842cef7ce.gif)
 
 ## 🔧 Setup
 Run ```npm start``` for both client and server side to start the app. 
